@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&display=swap");
 
 *,
 *::after,
@@ -16,25 +16,25 @@ svg {
 
 h1 {
   color: rgb(107, 107, 107);
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: 1rem;
 }
 
 h2 {
   color: rgb(107, 107, 107);
-  margin: 3rem 2rem 0 2rem;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 
 h3 {
   color: rgb(107, 107, 107);
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 .header {
   width: 100%;
   height: 30%;
-  background: rgba(77, 73, 0, 0.5);
+  background: rgba(27, 27, 27, 0.5);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -78,22 +78,33 @@ body {
   margin-top: 3rem;
 }
 
-.container {
+.container-counter {
   color: black;
-  font-family: Helvetica, sans-serif;
+  display: flex;
   font-weight: lighter;
   text-align: center;
 }
 
-li {
+.container-counter ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+.container-counter ul li {
   display: inline-block;
   list-style-type: none;
-  padding: 1em;
-  text-transform: uppercase;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-family: "Dancing Script", cursive;
+  color: rgb(107, 107, 107);
 }
-li span {
+.container-counter ul li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 1.3rem;
 }
 
 /* envelop */
@@ -105,6 +116,25 @@ li span {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+
+.envelope-container {
+  margin-top: 1rem;
+  width: 200px;
+  height: 200px;
+  background-color: #333;
+  background-image: url("img/poza-bg-top.jpg");
+  background-position: center;
+  background-size: contain;
+}
+
+.envelope-container::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border: 2px solid #333;
+  transform: rotateZ(-25deg);
 }
 
 .envelope {
@@ -189,6 +219,7 @@ li span {
   position: absolute;
   width: 194px;
   height: 84px;
+  padding: 0.5rem;
   background-color: rgb(73, 0, 0);
   top: 8px;
   left: 3px;
@@ -215,6 +246,7 @@ li span {
   width: 100%;
   height: 100%;
   left: 0px;
+  padding: 1rem;
   background: rgb(73, 0, 0);
   color: white;
   border-bottom: 1px solid #ccc;
@@ -231,6 +263,7 @@ li span {
   height: 100%;
   top: 0;
   left: 0px;
+  padding: 0;
   background: rgb(73, 0, 0);
   color: white;
   border-top: 1px solid #ccc;
@@ -244,15 +277,15 @@ li span {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
   z-index: 1;
 }
 
 .parintii {
   visibility: hidden;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   text-align: center;
+  font-family: "Dancing Script", cursive;
   color: white;
   transform: scale(-1) rotateY(180deg) translateY(-10px);
 }
@@ -263,7 +296,7 @@ li span {
   margin: 0 auto;
   text-align: center;
   transition-delay: 0.4s;
-  transform: scale(-1) rotateY(180deg) translateY(-10px);
+  transform: scale(-1) rotateY(180deg) translateY(0px);
 }
 
 .envelope.open .letter-up {
@@ -344,7 +377,6 @@ li span {
   to {
     transform: rotateX(150deg);
     background-image: none;
-    content: "";
   }
 }
 
@@ -359,7 +391,6 @@ li span {
 
 @keyframes fold-back {
   from {
-    content: "";
     background-image: none;
     transform: rotateX(150deg);
   }
@@ -380,9 +411,9 @@ li span {
 #open {
   position: absolute;
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: 1px solid #ddd;
-  border-radius: 25px;
+  border-radius: 20px;
   background: linear-gradient(#eee, #ccc);
   color: #333;
   text-shadow: 0 1px 0 #fff;
@@ -401,10 +432,10 @@ li span {
   display: none;
   background: #eee;
   position: absolute;
-  top: -0.2rem;
-  right: -2.7rem;
+  top: 0;
+  right: -3rem;
   text-align: center;
-  padding: 10px 20px;
+  padding: 5px 10px;
   border: 1px solid #ddd;
   border-radius: 25px;
   background: linear-gradient(#eee, #ccc);
@@ -449,7 +480,7 @@ li span {
   padding: 0.2rem;
   border-radius: 5px;
   border: none;
-  font-family: "Poppins", sans-serif;
+  font-family: "Dancing Script", cursive;
 }
 
 .confirm-section form textarea {
@@ -482,4 +513,6 @@ li span {
   color: white;
   cursor: pointer;
   width: 100%;
+  font-weight: bold;
+  font-family: "Dancing Script", cursive;
 }

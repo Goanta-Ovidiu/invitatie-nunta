@@ -36,14 +36,11 @@ closeBtn.addEventListener("click", function () {
   }, 5000);
 });
 
-const count = document.getElementById("count");
-const head = document.getElementById("head");
-const giftbox = document.getElementById("merrywrap");
-const canvasC = document.getElementById("c");
+const count = document.querySelector("#count");
 
 const config = {
   birthdate: "Aug 9, 2022",
-  name: "Momo 🤍",
+  name: "Wedding 🤍",
 };
 
 const second = 1000,
@@ -52,18 +49,18 @@ const second = 1000,
   day = hour * 24;
 
 let countDown = new Date(`${config.birthdate} 00:00:00`).getTime();
-x = setInterval(function () {
-  let now = new Date().getTime(),
-    distance = countDown - now;
+setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDown - now;
 
-  document.getElementById("day").innerText = Math.floor(distance / day);
-  document.getElementById("hour").innerText = Math.floor(
+  document.querySelector("#day").innerText = Math.floor(distance / day);
+  document.querySelector("#hour").innerText = Math.floor(
     (distance % day) / hour
   );
-  document.getElementById("minute").innerText = Math.floor(
+  document.querySelector("#minute").innerText = Math.floor(
     (distance % hour) / minute
   );
-  document.getElementById("second").innerText = Math.floor(
+  document.querySelector("#second").innerText = Math.floor(
     (distance % minute) / second
   );
 });

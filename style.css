@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  color: rgb(107, 107, 107);
+  color: white;
   text-align: center;
   font-family: "Dancing Script", cursive;
 }
@@ -126,6 +126,7 @@ body {
   background-image: url("img/poza-bg-top.jpg");
   background-position: center;
   background-size: contain;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .envelope-container::before {
@@ -140,9 +141,9 @@ body {
 .envelope {
   width: 200px;
   height: 100px;
-  margin: 130px auto 0;
+  margin: 130px auto 20px;
   background: rgb(118, 2, 2);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.25);
   position: relative;
   perspective: 800px;
 }
@@ -232,6 +233,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   font-size: small;
+  letter-spacing: 1px;
 }
 .envelope.open .letter {
   animation-name: remove;
@@ -323,6 +325,8 @@ body {
   animation-name: fold-down-back;
 }
 
+/* Animation envelop */
+
 @keyframes flip {
   100% {
     transform: rotateX(180deg);
@@ -410,6 +414,9 @@ body {
 
 #open {
   position: absolute;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  bottom: 1.4rem;
   text-align: center;
   padding: 5px 10px;
   border: 1px solid #ddd;
@@ -430,6 +437,8 @@ body {
 
 #close {
   display: none;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
   background: #eee;
   position: absolute;
   top: 0;
@@ -454,13 +463,25 @@ body {
   margin: 5rem;
 }
 
-.location-left {
-  left: 0;
+.locations h2 {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(27, 27, 27, 0.5);
+}
+
+.confirm-section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(27, 27, 27, 0.705);
 }
 
 .confirm-section form {
   width: 90vw;
-  height: 80vh;
   border-radius: 7px;
   display: flex;
   color: white;
@@ -468,7 +489,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   gap: 1rem;
-  background: rgba(27, 27, 27, 0.705);
+
   padding: 2rem;
 }
 

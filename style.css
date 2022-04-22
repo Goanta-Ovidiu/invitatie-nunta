@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Poppins&display=swap");
 
-:root {
-  --base: #5e5690;
-  --base-light: #7873a7;
-  --base-dark: #555184;
-  --shadow: #4f4c6b;
-  --letter: #d8d7e5;
-}
-
 *,
 *::after,
 *::before {
@@ -15,14 +7,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+svg {
+  width: 20vw;
+  height: 10vh;
+  margin: 0.5rem;
+}
+
+h1 {
+  color: rgb(107, 107, 107);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: rgb(107, 107, 107);
+  margin: 3rem 2rem 0 2rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  color: rgb(107, 107, 107);
+  margin-top: 5rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url("img/top-image.jpg"), url("img/bottom-img.jpg");
-  background-position: center top, bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
+  background-image: url("img/bg-top.jpg"), url("img/bg-bottom.jpg");
+  background-position: top, center bottom;
+  background-repeat: no-repeat, repeat;
+  background-size: contain, contain;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -52,27 +74,26 @@ body {
   margin: 0.5rem;
 }
 
-svg {
-  width: 20vw;
-  height: 10vh;
-  margin: 0.5rem;
-}
-
-h1 {
-  margin-top: 2rem;
-  color: rgb(107, 107, 107);
-  font-family: "Poppins", sans-serif;
-}
-
-h2 {
-  color: rgb(107, 107, 107);
+#countdown {
   margin-top: 3rem;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
 }
 
-p {
-  font-family: "Poppins", sans-serif;
+.container {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+li span {
+  display: block;
+  font-size: 4.5rem;
 }
 
 /* envelop */
@@ -413,7 +434,7 @@ p {
   display: flex;
   color: white;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   gap: 1rem;
   background: rgba(27, 27, 27, 0.705);
@@ -422,12 +443,35 @@ p {
 
 .confirm-section form input,
 .confirm-section form select,
-.confirm-section form textarea {
+.confirm-section form textarea,
+.confirm-section form label {
+  width: 100%;
   padding: 0.2rem;
   border-radius: 5px;
   border: none;
-  resize: none;
   font-family: "Poppins", sans-serif;
+}
+
+.confirm-section form textarea {
+  resize: none;
+  min-height: 4rem;
+  overflow: scroll;
+}
+
+.da,
+.nu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 9% 85%;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#da,
+#nu {
+  width: 100%;
+  height: 100%;
 }
 
 #submit-btn {
@@ -437,4 +481,5 @@ p {
   border-radius: 4px;
   color: white;
   cursor: pointer;
+  width: 100%;
 }

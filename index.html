@@ -176,8 +176,19 @@
       <p>19.08.2022</p>
     </div>
   </div>
-  <h2>Ne căsătorim!</h2>
+  <h3>Ne căsătorim!</h3>
   <h1>Mădălina & Ovidiu</h1>
+
+  <div class="container" id="count">
+
+    <ul>
+      <li><span id="day"></span>days</li>
+      <li><span id="hour"></span>hours</li>
+      <li><span id="minute"></span>minutes</li>
+      <li><span id="second"></span>seconds</li>
+    </ul>
+
+  </div>
   <div id="wrapper">
     <div id="open">Deschide</div>
     <div id="close">X</div>
@@ -196,7 +207,7 @@
           <h6 class="parintii">Spre bucuria părinților: <br />
             Ana și Marian Goanță <br />
             & <br>
-            Daniel Gavrilă și Cornelia Sandu</h6>
+            Cornelia Sandu și Daniel Gavrilă </h6>
 
         </div>
         <div class="letter-down">
@@ -244,18 +255,22 @@
       </select>
 
       <input type="hidden" name="_captcha" value="false">
-      <label for="da">Da, o să fiu alături de voi! <input type="checkbox" name="da" id="da"></label>
-      <label for="nu">Îmi pare rău, nu pot ajunge. <input type="checkbox" name="nu" id="nu"></label>
-
+      <input type="hidden" name="_cc" value="gavrilamadalinaiulia@gmail.com">
+      <span class="da">
+        <input type="checkbox" name="da" id="da">
+        <label for="da">Da, o să fiu alături de voi! </label>
+      </span>
+      <span class="nu">
+        <input type="checkbox" name="nu" id="nu">
+        <label for="nu">Îmi pare rău, nu pot ajunge. </label>
+      </span>
 
       <textarea name="message" id="textarea" rows="10" placeholder="Lasă-le mirilor un mesaj."></textarea>
-      <!--  
-        <input type="hidden" name="_next" value="http://127.0.0.1:5502/index.html"> -->
       <button type="submit" id="submit-btn">Trimite</button>
     </form>
   </section>
   <footer>
-    <p> &copy; develop by Ovidiu Goanță </p>
+    <p> &copy; developed by Ovidiu Goanță </p>
   </footer>
   <script src="index.js"></script>
 </body>

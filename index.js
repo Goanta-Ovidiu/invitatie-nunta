@@ -39,7 +39,7 @@ closeBtn.addEventListener("click", function () {
 const count = document.querySelector("#count");
 
 const config = {
-  birthdate: "Aug 9, 2022",
+  birthdate: "Aug 19, 2022",
   name: "Wedding 🤍",
 };
 
